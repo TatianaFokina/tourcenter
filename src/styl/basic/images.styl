@@ -1,0 +1,37 @@
+// ===================================================================================================================
+// Images
+// ===================================================================================================================
+
+// Responsive images
+.img-fluid
+	img-fluid()
+
+// Image thumbnails
+.img-thumbnail
+	padding $thumbnail-padding
+	background-color $thumbnail-bg
+	border $thumbnail-border-width solid $thumbnail-border-color
+	border-radius(3px)
+	transition($thumbnail-transition)
+	box-shadow($thumbnail-box-shadow)
+	// Keep them at most 100% wide
+	img-fluid()
+
+
+
+
+// ===================================================================================================================
+// Figures
+// ===================================================================================================================
+
+.figure
+	// Ensures the caption's text aligns with the image
+	display inline-block
+
+.figure-img
+	margin-bottom 1rem
+	line-height 1
+
+.figure-caption
+	font-size $figure-caption-font-size
+	color $figure-caption-color

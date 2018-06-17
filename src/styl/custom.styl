@@ -1,0 +1,81 @@
+.content
+	@extend .container-fluid
+	
+// Common styles
+.sets
+	background $brand-white
+
+// Collections menu
+.sets
+	&-menu
+		margin 0
+		padding 0
+		display flex
+		list-style none
+		border-bottom 1px solid $brand-gray-border
+		&__item
+			padding 0 1rem 0 1rem // 16px
+			color $brand-gray-light
+		&__item--active &__text
+			display inline-block
+			border-bottom 3px solid $brand-1
+		&__text
+			padding 1.333rem 0 1.067rem 0
+		
+		// Menu button
+		&-btn
+			margin-left auto
+			padding 0 1rem 0 1.7rem
+			color $brand-1
+			background url("../imgs/icons/ico-add.svg") 0 50% no-repeat
+			background-size 20px
+			border 0
+	
+	&-fields
+		padding 2.5rem 1.333rem 1.333rem 1.5rem // 40px 35px ... 24px
+
+// Common styles for label and input
+.field
+	&-name
+		margin-bottom 0.5rem
+		color $brand-gray-text
+	&-input
+		height 34px
+		border solid 1px $brand-gray-border
+		border-radius 2px
+		
+// Collection & city
+.common
+	display flex
+	align-items flex-end
+
+.field
+	&__collection
+		margin-right 1rem
+	&__city
+		background url("../imgs/icons/ico-del--1.svg") 0 50% no-repeat
+		background-size 20px
+
+.btn-watch
+	margin-left auto
+	padding 0 40px 0 15px
+	height 42px
+	background-color $brand-2
+	background-image url("../imgs/icons/ico-arrow.svg")
+	background-size 20px
+	background-position 95% 50%
+	background-repeat no-repeat
+	color $brand-white
+	border 0
+	border-radius 2px
+
+.region
+	margin-top 2.5rem // 40px
+
+.field__region
+	padding 1rem 0 1.125rem 1rem // 18px 16px
+	border 1px solid $brand-gray-border
+	&-name
+		margin-bottom 1.188rem
+	&-items
+		display flex

@@ -1,0 +1,113 @@
+// ===================================================================================================================
+// Colors
+// ===================================================================================================================
+
+$brand-1 = #2d9cdb
+$brand-2 = #ff8e41
+$brand-3 = #eb5757
+$brand-4 = #27ae60
+
+
+// Type
+$links-color = $brand-1
+$links-color--hover = $brand-1--2
+
+
+// Grayscale
+$brand-white = #fff
+$brand-black = #000
+$brand-gray-text = #888888
+$brand-gray-border = #e0e0e0
+$brand-gray-bg = #f2f2f2
+$brand-gray-field = #ECEFF1
+$brand-gray-light = #BDBDBD
+
+
+
+
+// Selection color
+//$selection = desaturate(lighten($brand-1, 60%), 40%)
+
+
+
+
+// ===================================================================================================================
+// Type
+// ===================================================================================================================
+
+// Text
+$font-size-root = 16px
+$font-size-base = 1rem
+//$font-size-lg = 1.5rem // 24px
+$font-size-md = 0.875rem // 14px
+//$font-size-sm = 0.812rem // 13px
+$font-size-xs = 0.75rem // 12px
+$line-height-base = 1.5
+
+// Headings
+$headings-color = inherit
+
+$font-size-h1 = 1.4rem // 21px
+//$font-size-h3 = 1.313rem // 21px
+//$font-size-h4 = 1.2rem
+
+$headings-line-height = 1
+
+
+
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes = {
+  "25": 25%,
+  "50": 50%,
+  "75": 75%,
+  "100": 100%
+  }
+
+
+
+
+// ===================================================================================================================
+// Grid
+// ===================================================================================================================
+
+// Array of breakpoints and width
+$breakpoints-and-widths = {
+	// Extra small screen (phone)
+	'xs': {
+		"breakpoint": "0",
+		"container-width": "0"
+	},
+	// Small screen (phone)
+	'sm': {
+		"breakpoint": "576px",
+		"container-width": "540px"
+	},
+	// Medium screen (tablet)
+	'md': {
+		"breakpoint": "768px",
+		"container-width": "720px"
+	},
+	// Large screen (desktop)
+	'lg': {
+		"breakpoint": "992px",
+		"container-width": "960px"
+	}
+}
+
+
+// Searching for a last width of container
+for $key, $value in $breakpoints-and-widths
+	$last-width = unquote($value["container-width"])
+
+
+// Number of columns
+$columns = 12
+
+$grid-gutter-width-base = 2rem // 32px
+$grid-gutter-widths = {
+	"xs": $grid-gutter-width-base,
+	"sm": $grid-gutter-width-base,
+	"md": $grid-gutter-width-base,
+	"lg": $grid-gutter-width-base
+}

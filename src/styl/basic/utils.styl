@@ -1,0 +1,69 @@
+// ===================================================================================================================
+// Clearfix
+// ===================================================================================================================
+
+.cf
+	clearfix()
+
+.clear
+	clear both
+
+
+
+
+// ===================================================================================================================
+// Display
+// ===================================================================================================================
+
+.d-none
+	display none !important
+
+.d-inline
+	display inline
+
+.d-inline-block
+	display inline-block
+
+.d-block
+	display block
+
+.d-table
+	display table
+
+.d-table-cell
+	display table-cell
+
+.d-flex
+	display flex
+
+.d-inline-flex
+	display inline-flex
+
+.d-grid
+	display grid
+
+
+
+
+	
+	
+
+
+
+
+
+// ===================================================================================================================
+// Visibility utilities
+// ===================================================================================================================
+
+.invisible
+	invisible()
+
+// Responsive visibility utilities
+for $name, $w in $breakpoints
+	.hidden-{$name}-up
+		+media-breakpoint-up($name, $w)
+			display none !important
+	.hidden-{$name}-down
+		+media-breakpoint-down($name, $w)
+			display none !important

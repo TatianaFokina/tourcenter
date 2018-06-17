@@ -1,0 +1,31 @@
+$row-styles
+	display flex
+	flex 0 1 100%
+	flex-direction row
+	flex-wrap wrap
+	padding 0
+	list-style none
+
+.row
+	@extend $row-styles
+	margin-left - ($grid-gutter-width-base/2)
+	margin-right - ($grid-gutter-width-base/2)
+	&:last-child
+		margin-bottom 0
+
+// Without paddings
+.row--no-gutters
+.row2--no-gutters
+	@extend $row-styles
+	margin: 0
+	[class*="col--"]
+		padding 0
+
+// Gaps between columns
+.row2
+	@extend $row-styles
+	margin-left -5px
+	margin-right -5px
+	div[class*='col--']
+		padding-left 5px
+		padding-right 5px

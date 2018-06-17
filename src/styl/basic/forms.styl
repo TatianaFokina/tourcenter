@@ -1,0 +1,56 @@
+$placeholder-color = #b9b9b9
+
+// Field + label
+.form-item
+	margin-bottom 15px
+
+// Placeholder text
+placeholder($placeholder-color)
+	&:-moz-placeholder
+		color $placeholder-color // Firefox 4-18
+	&::-moz-placeholder
+		color $placeholder-color // Firefox 19+
+	&:-ms-input-placeholder
+		color $placeholder-color // Internet Explorer 10+
+	&::-webkit-input-placeholder
+		color $placeholder-color // Safari and Chrome
+
+label
+	display block
+	font-size 0.8rem
+	font-weight 700
+
+select
+.select
+textarea
+input[type="text"]
+input[type="password"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="month"]
+input[type="time"]
+input[type="week"]
+input[type="number"]
+input[type="email"]
+input[type="url"]
+input[type="search"]
+input[type="tel"]
+input[type="color"]
+.uneditable-input
+	display inline-block
+	//color
+	padding 5px 10px
+	// height 45px // padding-top/bottom (for IE)
+	font-size $font-size-base
+	//background-color
+	//border
+	//box-shadow
+	//transition border linear .2s, box-shadow linear .2s
+	//&:focus
+	//	border-color
+		
+// Errors & validation
+//.form__error
+	// color
+	// border-color

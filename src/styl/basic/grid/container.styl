@@ -1,0 +1,28 @@
+// Basic container`s styles
+make-container()
+	position relative
+	margin-right auto
+	margin-left auto
+	padding-left ($grid-gutter-width-base / 2)
+	padding-right ($grid-gutter-width-base / 2)
+
+// Make container width for devices >=sm
+make-container-width()
+	for $key, $value in $breakpoints-and-widths
+		$breakpoint = unquote($value["breakpoint"])
+		if $breakpoint != 0
+			@media (min-width: unquote($value["breakpoint"]))
+				width: unquote($value["container-width"])
+
+/*.container
+	make-container()
+	max-width 100%
+	width 100%
+	make-container-width()*/
+
+.container-fluid
+	make-container()
+	// Searching for a last width of container
+	for $key, $value in $breakpoints-and-widths
+		$last-width = $value["container-width"]
+	max-width: unquote($last-width)

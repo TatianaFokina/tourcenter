@@ -1,0 +1,82 @@
+extends -templates/index--tpl
+
+
+block content
+	h1 Настройки интересов
+
+	// Form
+	.sets
+		// Form menu
+		ul.sets-menu
+			li.sets-menu__item
+				.sets-menu__text Подборка Васи
+			li.sets-menu__item.sets-menu__item--active
+				.sets-menu__text Подборка 123
+			li.sets-menu__item
+				.sets-menu__text Турция 20.03
+			li.sets-menu__item
+				.sets-menu__text Подборка #1
+			button.sets-menu-btn Добавить подборку
+		.sets-fields
+			// Collection and city
+			.common
+				.field__collection
+					label.field-name(for="collectionName") Название подборки
+					input.field-input(id="collectionName" type="text")
+				.field__city
+					label.field-name(for="city") Ваш город
+					input.field-input(id="city" type="text")
+			// Region
+			.region
+				.region-header Страны
+				.field-name.region-desc Вы можете задать несколько стран или регионов для одной подборки
+				.field__region
+					.field__region-name Юго-Восточная Азия
+					.field__region-items
+						.field__region-items--country Таиланд
+						.field__region-items--country Вьетнам
+						.field__region-items--country Индонезия
+						button Добавить регион
+						button Добавить страны
+			// Information
+			.field__depart-arriv
+				label.field-name (for="depart-arriv") Дата вылета
+				input.field-input(id="depart-arriv" type="text")
+			.field__days
+				label.field-name (for="days") На сколько
+				input.field-input(id="days" type="text")
+			.field__guests
+				label.field-name (for="guests") Количество гостей
+				input.field-input(id="guests" type="text")
+			.field__price
+				label.field-name (for="price") Стоимость тура
+				input.field-input(id="price" type="text")
+			.stars
+				.stars-desc.field-name Категория отелей от
+				.field__stars
+					label(for="rating--5" class="star")
+					input(type="radio" class="rating-input" id="rating--5" name="rating-input-1")
+
+					label(for="rating--4" class="star")
+					input(type="radio" class="rating-input" id="rating--4" name="rating-input-1")
+
+					label(for="rating--3" class="star")
+					input(type="radio" class="rating-input" id="rating--3" name="rating-input-1")
+
+					label(for="rating--2" class="star")
+					input(type="radio" class="rating-input" id="rating--2" name="rating-input-1")
+
+					label(for="rating--1" class="star")
+					input(type="radio" class="rating-input" id="rating--1" name="rating-input-1")
+			.field__rating
+				.field__rating-name Рейтинг TopHotels
+				.field__rating-field Не ниже
+			.field__food
+				label.field-name (for="food") Тип питания
+				input.field-input(id="food" type="text")
+			.field__location
+				label.field-name (for="location") Расположение
+				input.field-input(id="location" type="text")
+
+			button.btn-watch Смотреть результаты
+			button Удалить подборку

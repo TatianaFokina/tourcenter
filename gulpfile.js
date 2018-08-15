@@ -75,8 +75,8 @@ gulp.task('__compileStylus', function () {
 		.pipe(browserSync.reload({stream: true}));
 });
 
-// Stylus (all.styl → dist/)
-gulp.task('__compileStylus_dist', function () {
+// Stylus (all.styl → docs/)
+gulp.task('__compileStylus_docs', function () {
 	var $postcss_plugins = [
 		postcss_inline_svg,
 		mergeRules
@@ -97,7 +97,7 @@ gulp.task('__compileStylus_dist', function () {
 			cascade: false
 		}))
 		.pipe(gulp_postcss($postcss_plugins))
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('docs/css'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
@@ -185,9 +185,9 @@ gulp.task('LiveReload', ['Build--Test'], function () {
 // ========================================================================
 // Удаление папок
 // ========================================================================
-// dist
-gulp.task('__delDist', function() {
-	return del.sync('dist');
+// docs
+gulp.task('__deldocs', function() {
+	return del.sync('docs');
 });
 // test
 gulp.task('__delTest', function() {
@@ -218,11 +218,11 @@ gulp.task('Build--Test', ['__compileStylus', '__mergeJS', '__compilePug'], funct
 		.pipe(gulp.dest('test/imgs'));
 });
 
-// → "dist"
-gulp.task('Build', ['__delDist', '__compileStylus', '__mergeJS'], function() {
+// → "docs"
+gulp.task('Build', ['__deldocs', '__compileStylus', '__mergeJS'], function() {
 	// Шрифты
 	gulp.src('src/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'));
+		.pipe(gulp.dest('docs/fonts'));
 
 	// Favicons
 	gulp.src('src/favicons/**/*')
@@ -232,7 +232,7 @@ gulp.task('Build', ['__delDist', '__compileStylus', '__mergeJS'], function() {
 			imagemin.optipng({optimizationLevel: 7}),
 			imagemin.svgo({plugins: [{removeViewBox: true}]})
 		])))
-		.pipe(gulp.dest('dist/favicons'));
+		.pipe(gulp.dest('docs/favicons'));
 
 	// Images (с оптимизацией)
 
@@ -244,11 +244,11 @@ gulp.task('Build', ['__delDist', '__compileStylus', '__mergeJS'], function() {
 			imagemin.optipng({optimizationLevel: 7}),
 			imagemin.svgo({plugins: [{removeViewBox: true}]})
 		])))
-		.pipe(gulp.dest('dist/imgs'));
+		.pipe(gulp.dest('docs/imgs'));
 
 	// Copy html
 	gulp.src('test/**/*.html')
-		.pipe(gulp.dest("dist"));
+		.pipe(gulp.dest("docs"));
 
 	// CSS
 	gulp.src('test/css/**/*.css')
@@ -256,18 +256,18 @@ gulp.task('Build', ['__delDist', '__compileStylus', '__mergeJS'], function() {
 	//.pipe(rename({suffix: '.min'}))
 	/*.pipe(modifyCssUrls({ // Меняет пути к файлам в css
 		modify: function (url, filePath) {
-			return '/assets/dist' + url;
+			return '/assets/docs' + url;
 		}/!*,
 		prepend: 'https://fancycdn.com/',
 		append: '?cache-buster'*!/
 	}))*/
 	// Меняет пути к файлам в css
-	//.pipe(replace('\"/fonts', '\"/assets/dist/fonts'))
-	//.pipe(replace('\'/fonts', '\'/assets/dist/fonts'))
+	//.pipe(replace('\"/fonts', '\"/assets/docs/fonts'))
+	//.pipe(replace('\'/fonts', '\'/assets/docs/fonts'))
 	// Сжимаем
 		.pipe(cssnano())
 		// Сохраняем в папку
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest('docs/css'));
 
 	// Сжатие JS
 	gulp.src('test/js/**/*.js')
@@ -275,11 +275,11 @@ gulp.task('Build', ['__delDist', '__compileStylus', '__mergeJS'], function() {
 		// Сжимаем JS-файл
 		.pipe(uglify())
 		// Сохраняем в папку
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('docs/js'));
 
 	// Copy .txt
 	gulp.src('src/*.txt')
-		.pipe(gulp.dest("dist"));
+		.pipe(gulp.dest("docs"));
 });
 
 

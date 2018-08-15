@@ -8,5 +8,41 @@ body
 	flex 1 0 auto
 
 // Padding before footer
-.content>section:last-of-type
-	padding-bottom 80px
+.content
+	padding-bottom 5.125rem // 82px
+
+.footer
+	background $brand-white
+	font-size $font-size-md
+	color $brand-gray-text
+	
+.footer
+	&-inf
+		padding 2.5rem 0 1rem 0 // 40px top, 16px bottom
+		display flex
+		line-height 1.76
+		justify-content start
+		+media(md)
+			justify-content space-around
+
+	&-copywriting
+		padding 1rem 0 // 16px
+		text-align center
+		font-size $font-size-xs
+		border-top solid 1px $brand-gray-border
+	// Social links
+	&-social-link
+		padding-left 1.313rem // 21px
+		width 15px
+		height @width
+		background-repeat no-repeat
+		background-position 0 50%
+		&--vk
+			background-image url("../imgs/icons/ico-vk.svg")
+		&--fb
+			background-image url("../imgs/icons/ico-fb.svg")
+		&--inst
+			background-image url("../imgs/icons/ico-instagram.svg")
+		&--ok
+			background-image url("../imgs/icons/ico-ok.svg")
+	

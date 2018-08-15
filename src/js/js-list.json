@@ -1,3 +1,4 @@
 [
-  "./src/js/scripts.js"
+  "./src/js/scripts.js",
+  "./src/js/libs/datepicker/datepicker.js"
 ]

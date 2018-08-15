@@ -1,11 +1,16 @@
 .header
-	margin-bottom 2.533rem
 	background #0087d3
 	&-inr
-		height 50px
 		display flex
-		@extend .container-fluid
+		flex-wrap wrap
 		align-items center
+		@extend .container-fluid
+		// Adaptive
+		height 100%
+		padding-bottom 1rem
+		+media(md)
+			height 50px
+			padding-bottom 0
 
 .logo
 	width 84px
@@ -14,3 +19,20 @@
 	background-repeat no-repeat
 	background-position 0 50%
 	background-size cover
+	// Adaptive
+	margin-top 16px
+	+media(md)
+		margin-top 0
+
+.nav
+	height 100%
+	margin-left auto
+	& ul
+		display flex
+		flex-wrap wrap
+		justify-content center
+		+media(md)
+			justify-content start
+
+.content
+	padding-top 2.5rem // 40px

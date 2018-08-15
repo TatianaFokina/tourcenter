@@ -1,0 +1,17 @@
+a
+	color $brand-gray-text
+
+// Outline for links
+.js-focus-visible :focus:not(.focus-visible)
+	outline none
+	
+// Nav links
+.nav a
+	&.focus-visible
+		outline $brand-white solid 2px
+		outline-offset 8px
+
+// Tablist links
+.sets-tabs__item a
+	&.focus-visible
+		outline $brand-2 solid 2px

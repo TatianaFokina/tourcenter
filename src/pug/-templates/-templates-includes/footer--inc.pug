@@ -1,18 +1,27 @@
-footer
-	.container
-		.col--lg-4
-			h2 Туристический проект
-			.footer-address Москва, 1-й Щипковский переулок, д. 1
-			.footer-address--link
-				a(href="#") Показать на карте
-		.col--lg-4
-			.footer-contacts Время работы офиса:
-			.footer-contacts--1 Будни 10:00–21:00
-			.footer-contacts--2 Выходные и праздники 11:00–17:00
-		.col--lg-4
-			.footer-tel +7 495 585 55 55
-			.footer-tel(href="tel:+74955855555") Обратная связь
-		.col--lg-4.footer-social
-			.footer-social--vk
-				a(href="#") ВКонтакте
-		.footer-copywriting Разработано командой TourAdmin © 2017
+footer.footer
+	.container-fluid
+		.row.footer-inf
+			.footer-col
+				.h2 Контакты
+				a(href="https://www.google.ru/maps/place/Кангерлуссуак,+Гренландия/@67.2241682,-51.526122,9z/data=!4m13!1m7!3m6!1s0x4ea20dbbe3c07715:0x34cf9d830114e218!2z0JPRgNC10L3Qu9Cw0L3QtNC40Y8!3b1!8m2!3d71.706936!4d-42.604303!3m4!1s0x4e96acdbde161049:0x43803e2e1a11ca55!8m2!3d67.0074281!4d-50.723877" target="_blank" rel="noopener norefferer").footer-address Москва, 1-й Щипковский переулок, д. 1
+				.footer-tel +7 495 585 55 55
+				a(href="tel:+74955855555").footer-tel Обратная связь
+			.footer-col
+				.h2 Время работы офиса
+				.footer-contacts--1 <b>Будни</b> 10:00–21:00
+				.footer-contacts--2 <b>Выходные и праздники</b> 11:00–17:00
+			.footer-col
+				.h2 Мы в соцсетях
+				.footer-social
+					a(href="#").footer-social-link.footer-social-link--vk ВКонтакте
+				.footer-social
+					a(href="#").footer-social-link.footer-social-link--fb Facebook
+				.footer-social
+					a(href="#").footer-social-link.footer-social-link--inst Instagram
+				.footer-social
+					a(href="#").footer-social-link.footer-social-link--ok Одноклассники
+		.footer-copywriting Разработано командой капибар © 2018
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+script(src="js/all.js")
+script(src='//unpkg.com/focus-visible@latest/dist/focus-visible.min.js')

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700&amp;amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-inr">
+			<div class="logo"></div>
+			<nav class="nav">
+				<ul>
+					<li class="nav-item"><a href="#">Моя лента</a></li>
+					<li class="nav-item nav-item__active"><a href="#">Интересы</a></li>
+					<li class="nav-item"><a href="#">Направления</a></li>
+					<li class="nav-item"><a href="#">Подбор тура</a></li>
+					<li class="nav-item"><a href="#">Заявка</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="content container-fluid">
+		<div class="h1">Настройки интересов</div>
+		<!-- Form-->
+		<div class="sets">
+			<!-- Form menu section-->
+			<ul class="sets-tabs" role="tablist">
+				<li class="sets-tabs__item" role="presentation"><a class="sets-tabs__item-name" href="#" role="tab" aria-selected="false">Подборка Васи</a></li>
+				<li class="sets-tabs__item sets-tabs__item--active" role="presentation"><a class="sets-tabs__item-name" href="#" role="tab" aria-selected="true" aria-controls="panel2">Подборка 123</a></li>
+				<li class="sets-tabs__item" role="presentation"><a class="sets-tabs__item-name" href="#" role="tab" aria-selected="false">Турция 20.03</a></li>
+				<li class="sets-tabs__item" role="presentation"><a class="sets-tabs__item-name" href="#" role="tab" aria-selected="false">Подборка #1</a></li><button class="sets__add-btn">Добавить подборку</button></ul>
+			<div class="sets-tabs-content" role="tabpanel" id="panel2" aria-labelledby="Подборка 123">
+				<!-- Collection and city section-->
+				<div class="common">
+					<div class="collection-name"><label class="field-label" for="collectionName">Название подборки</label><input class="field-input" id="collectionName" type="text" value="Подборка 123"></div>
+					<div class="city-name select-wrp"><label class="field-label" for="city">Ваш город</label><input class="field-input select-input" id="city" type="text" placeholder="Например, Москва">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">Москва</li>
+							<li class="select-block__item">Санкт-Петербург</li>
+							<li class="select-block__item">Новосибирск</li>
+							<li class="select-block__item">Екатеринбург</li>
+							<li class="select-block__item">Нижний Новгород</li>
+							<li class="select-block__item">Казань</li>
+							<li class="select-block__item">Челябинск</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Region section-->
+				<div class="regions">
+					<div class="regions__header field-label">Страны</div>
+					<div class="regions__desc field-label field-label__desc">Вы можете задать несколько стран или регионов для одной подборки</div>
+					<div class="regions__list">
+						<div class="region">
+							<div class="region__name">Юго-Восточная Азия</div>
+							<div class="region-container">
+								<ul class="region__countries">
+									<li class="region__one-country region__one-country--1">Таиланд<button class="region__remove-btn"></button></li>
+									<li class="region__one-country region__one-country--2">Вьетнам<button class="region__remove-btn"></button></li>
+									<li class="region__one-country region__one-country--3">Индонезия<button class="region__remove-btn"></button></li>
+								</ul><button class="regions__add-btn regions__add-btn--region">Добавить регион</button><button class="regions__add-btn regions__add-btn--country">Добавить страну</button></div>
+						</div>
+					</div>
+				</div>
+				<!-- Information section-->
+				<div class="props">
+					<div class="props__item props__item--flight"><label class="field-label" for="flight">Дата вылета</label><input class="field-input datepicker-here" id="flight" type="text" data-range="true" data-multiple-dates-separator="–"></div>
+					<div class="props__item props__item--days select-wrp"><label class="field-label" for="days">На сколько</label><input class="field-input select-input" id="days" type="text" value="7–14 ночей">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">7–14 ночей</li>
+							<li class="select-block__item">14–21 ночей</li>
+							<li class="select-block__item">21–28 ночей</li>
+							<li class="select-block__item">Больше 28 ночей</li>
+						</ul>
+					</div>
+					<div class="props__item props__item--guests select-wrp"><label class="field-label" for="guests">Количество гостей</label><input class="field-input select-input" id="guests" type="text" value="2 взрослых, 2 детей">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">1 взрослый</li>
+							<li class="select-block__item">2 взрослых</li>
+							<li class="select-block__item">3 взрослых</li>
+							<li class="select-block__item">1 взрослый, 1 ребёнок</li>
+							<li class="select-block__item">2 взрослых, 2 детей</li>
+							<li class="select-block__item">3 взрослых, 3 детей</li>
+						</ul>
+					</div>
+					<div class="props__item props__item--price select-wrp"><label class="field-label" for="price">Стоимость тура</label><input class="field-input select-input" id="price" type="text" value="50 000 ₽ – 150 000 ₽">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">Любая</li>
+							<li class="select-block__item">50 000<span class="select-block__item__curr"> ₽</span> – 150 000<span class="select-block__item__curr"> ₽</span></li>
+							<li class="select-block__item">150 000<span class="select-block__item__curr"> ₽</span> – 200 000<span class="select-block__item__curr"> ₽</span></li>
+							<li class="select-block__item">200 000<span class="select-block__item__curr"> ₽</span> – 250 000<span class="select-block__item__curr"> ₽</span></li>
+							<li class="select-block__item">250 000<span class="select-block__item__curr"> ₽</span> – 500 000<span class="select-block__item__curr"> ₽</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="props">
+					<div class="stars props__item">
+						<div class="stars__desc field-label">Категория отелей от</div>
+						<form class="field-input stars__control" aria-label="Категория отелей"><input class="stars__control--hidden" value="1" id="star1" type="radio" name="rating"><label class="star" for="star1"><span class="stars__control--hidden">1 звезда</span></label><input class="stars__control--hidden" value="2" id="star2" type="radio"
+							    name="rating"><label class="star" for="star2"><span class="stars__control--hidden">2 звезды</span></label><input class="stars__control--hidden" value="3" id="star3" type="radio" name="rating"><label class="star" for="star3"><span class="stars__control--hidden">3 звезды</span></label>
+							<input
+							    class="stars__control--hidden" value="4" id="star4" type="radio" name="rating"><label class="star" for="star4"><span class="stars__control--hidden">4 звезды</span></label><input class="stars__control--hidden" value="5" id="star5" type="radio" name="rating"><label class="star" for="star5"><span class="stars__control--hidden">5 звёзд</span></label></form>
+					</div>
+					<div class="props__item props__item--rating">
+						<div class="field-label">Рейтинг TopHotels</div>
+						<div class="props__rating-dropdown field-input" role="input" aria-label="Рейтинг TopHotels">
+							<div class="props__rating-label">Не ниже</div>
+							<div class="props__rating-icon"></div>
+							<div class="props__rating-val">4.0</div>
+						</div>
+					</div>
+					<div class="props__item props__item--food select-wrp"><label class="field-label" for="food">Тип питания</label><input class="field-input select-input" id="food" type="text" value="Любой">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">Любой</li>
+							<li class="select-block__item">Только завтраки</li>
+							<li class="select-block__item">Завтрак, обед и ужин</li>
+							<li class="select-block__item">Всё включено</li>
+							<li class="select-block__item">Ультра всё включено</li>
+						</ul>
+					</div>
+					<div class="props__item props__item--location select-wrp"><label class="field-label" for="location">Расположение</label><input class="field-input select-input" id="location" type="text" value="Пляжное, 1-я линия">
+						<ul class="select-block" aria-hidden="true">
+							<li class="select-block__item">Пляжное, 1-я линия</li>
+							<li class="select-block__item">Пляжное, 2-я линия</li>
+							<li class="select-block__item">Центр города</li>
+							<li class="select-block__item">Любое</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sets-footer"><button class="sets-footer__submit-btn">Смотреть результаты</button><button class="sets-footer__remove-btn">Удалить подборку</button></div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row footer-inf">
+				<div class="footer-col">
+					<div class="h2">Контакты</div><a class="footer-address" href="https://www.google.ru/maps/place/Кангерлуссуак,+Гренландия/@67.2241682,-51.526122,9z/data=!4m13!1m7!3m6!1s0x4ea20dbbe3c07715:0x34cf9d830114e218!2z0JPRgNC10L3Qu9Cw0L3QtNC40Y8!3b1!8m2!3d71.706936!4d-42.604303!3m4!1s0x4e96acdbde161049:0x43803e2e1a11ca55!8m2!3d67.0074281!4d-50.723877"
+					    target="_blank" rel="noopener norefferer">Москва, 1-й Щипковский переулок, д. 1</a>
+					<div class="footer-tel">+7 495 585 55 55</div><a class="footer-tel" href="tel:+74955855555">Обратная связь</a></div>
+				<div class="footer-col">
+					<div class="h2">Время работы офиса</div>
+					<div class="footer-contacts--1"><b>Будни</b> 10:00–21:00</div>
+					<div class="footer-contacts--2"><b>Выходные и праздники</b> 11:00–17:00</div>
+				</div>
+				<div class="footer-col">
+					<div class="h2">Мы в соцсетях</div>
+					<div class="footer-social"><a class="footer-social-link footer-social-link--vk" href="#">ВКонтакте</a></div>
+					<div class="footer-social"><a class="footer-social-link footer-social-link--fb" href="#">Facebook</a></div>
+					<div class="footer-social"><a class="footer-social-link footer-social-link--inst" href="#">Instagram</a></div>
+					<div class="footer-social"><a class="footer-social-link footer-social-link--ok" href="#">Одноклассники</a></div>
+				</div>
+			</div>
+			<div class="footer-copywriting">Разработано командой капибар © 2018</div>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/all.js"></script>
+	<script src="//unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+</body>
+
+</html>

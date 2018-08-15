@@ -50,9 +50,12 @@ block content
 				.props__item.props__item--flight
 					label.field-label(for="flight") Дата вылета
 					input.field-input.datepicker-here(id="flight" type="text" data-range="true" data-multiple-dates-separator="–")
-				.props__item.props__item--days
+				.props__item.props__item--days.select-wrp
 					label.field-label(for="days") На сколько
-					input.field-input(id="days" type="text" value="7–14 ночей")
+					input.field-input.select-input(id="days" type="text" value="7–14 ночей")
+					ul.select-block(aria-hidden="true")
+						each val in ['7–14 ночей', '14–21 ночей', '21–28 ночей', 'Больше 28 ночей']
+							li.select-block__item= val
 				.props__item.props__item--guests.select-wrp
 					label.field-label(for="guests") Количество гостей
 					input.field-input.select-input(id="guests" type="text" value="2 взрослых, 2 детей")
